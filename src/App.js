@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import "./App.css";
+
+import Home from "./pages/home";
+import Post from "./pages/post";
+import NoMatch from "./pages/no-match";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">
+          <h2>My React + Firebase Blog</h2>
+        </Link>
+      </nav>
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/404" component={NoMatch} />
+          <Route path="/:slug" component={Post} />
+          <Route component={NoMatch} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
