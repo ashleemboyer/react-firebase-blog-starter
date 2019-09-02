@@ -6,7 +6,8 @@
       "coverImage": "http://placekitten.com/700/350",
       "coverImageAlt": "Another random kitten from placekitten.com.",
       "slug": "my-second-blog-post",
-      "date": "August 7th, 2019"
+      "dateFormatted": "2019-08-07",
+      "datePretty": "August 7th, 2019"
     },
     "my-first-blog-post": {
       "title": "My First Blog Post",
@@ -14,7 +15,8 @@
       "coverImage": "http://placekitten.com/700/400",
       "coverImageAlt": "A random kitten from placekitten.com.",
       "slug": "my-first-blog-post",
-      "date": "August 1st, 2019"
+      "dateFormatted": "2019-08-01",
+      "datePretty": "August 1st, 2019"
     }
   }
 }
