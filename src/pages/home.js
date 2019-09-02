@@ -10,7 +10,8 @@ const Home = () => {
       coverImage: "http://placekitten.com/700/350",
       coverImageAlt: "Another random kitten from placekitten.com.",
       slug: "my-second-blog-post",
-      date: "August 7th, 2019"
+      dateFormatted: "2019-08-07",
+      datePretty: "August 7th, 2019"
     },
     {
       title: "My First Blog Post",
@@ -19,7 +20,8 @@ const Home = () => {
       coverImage: "http://placekitten.com/700/400",
       coverImageAlt: "A random kitten from placekitten.com.",
       slug: "my-first-blog-post",
-      date: "August 1st, 2019"
+      dateFormatted: "2019-08-01",
+      datePretty: "August 1st, 2019"
     }
   ];
 
@@ -35,7 +37,7 @@ const Home = () => {
           <div className="card-content">
             <h2>
               {blogPost.title} &mdash;{" "}
-              <span style={{ color: "#5e5e5e" }}>{blogPost.date}</span>
+              <span style={{ color: "#5e5e5e" }}>{blogPost.datePretty}</span>
             </h2>
             <p
               dangerouslySetInnerHTML={{
